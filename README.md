@@ -19,7 +19,7 @@ This README provides all necessary instructions to set up and run both the **Web
 ### Step 1 — Navigate to the backend directory
 cd backend 
 
-### Step2- InstLL Backend requirements 
+### Step2- Install Backend requirements 
 pip install -r requirements.txt
 
 ### Step 3 — Run database migrations

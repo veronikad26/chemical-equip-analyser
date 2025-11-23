@@ -5,13 +5,12 @@ This README provides all necessary instructions to set up and run both the **Web
 
 ---
 
-# 1. Web Version Setup  
-The web version consists of a **Django backend** and a **React frontend**.
 
 ## 1.1 Prerequisites  
 - Python 3.8 or higher  
 - pip  
 - Node.js (version 16 or higher recommended)
+- pip (Python package installer)
 
 ---
 

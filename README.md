@@ -18,19 +18,15 @@ The web version consists of a **Django backend** and a **React frontend**.
 ## 1.2 Backend Setup (Django)
 
 ### Step 1 — Navigate to the backend directory
-```bash
-cd backend
+cd backend 
 
 ### Step2- InstLL Backend requirements 
-```bash
 pip install -r requirements.txt
 
 ### Step 3 — Run database migrations
-```bash
 python manage.py migrate
 
 ### Step 4- Start the Django development server
-```bash
 python manage.py runserver
 
 The backend will now run on:
@@ -40,15 +36,12 @@ http://127.0.0.1:8000
 ## 1.3 Frontend Setup- Web version (React)
 
 ### Step 1 — Navigate to the frontend directory
-```bash
 cd frontend 
 
 ### Step 2 — Install Node.js dependencies
-```bash
 npm install
 
 ### Step 3 — Start the React development server
-```bash
 npm start
 
 The frontend will now run on:
@@ -58,13 +51,10 @@ http://localhost:3000
 ## 1.4 Frontend Setup- Desktop version (PyQt5)
 
 ### Step 1- Navigate to the desktop frontend directory
-```bash
 cd desktop-frontend
 
 ### Step 2- Install desktop dependencies
-```bash
 pip install -r requirements.txt
 
 ### Step 3- Run the desktop application
-```bash
 python main.py

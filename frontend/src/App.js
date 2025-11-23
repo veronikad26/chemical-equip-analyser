@@ -14,8 +14,8 @@ import ExcelUpload from './components/ExcelUpload';
 
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend);
 
-// Using proxy → Only /api/... needed
-const API = "/api";
+// Using environment variable for API base URL
+const API = process.env.REACT_APP_BACKEND_URL || "/api";
 
 function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);

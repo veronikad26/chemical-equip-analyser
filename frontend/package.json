@@ -61,6 +61,7 @@
   },
   "scripts": {
     "start": "craco start",
+    "build": "craco build",
     "start:both": "concurrently \"cd ../backend && python manage.py runserver\" \"npm start\""
   },
   "browserslist": {

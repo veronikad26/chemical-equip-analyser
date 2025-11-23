@@ -290,10 +290,13 @@ function Dashboard() {
   const downloadPDF = async () => {
     if (!currentData) return;
 
+    const token = localStorage.getItem('token');
+
     try {
-      const response = await axios.post(`/api/upload/`, formData, {
-       responseType: "blob" }
-      );
+      const response = await axios.get(`${API}/report/pdf/${currentData.id}/`, {
+        headers: { "Authorization": `Bearer ${token}` },
+        responseType: "blob"
+      });
 
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement("a");

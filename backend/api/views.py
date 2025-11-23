@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.parsers import MultiPartParser, FormParser
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.http import FileResponse
 from django.conf import settings
 import os
@@ -266,4 +266,8 @@ class PDFReportAPIView(APIView):
 
         doc.build(elements)
 
-        return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf', filename=f"report_{dataset.filename}.pdf")
+        # Return PDF as HTTP response with download headers
+        response = HttpResponse(content_type='application/pdf')
+        response['Content-Disposition'] = f'attachment; filename="report_{dataset.filename}.pdf"'
+        response.write(open(pdf_path, 'rb').read())
+        return response

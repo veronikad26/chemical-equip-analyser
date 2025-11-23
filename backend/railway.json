@@ -3,7 +3,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "preDeployCommand": "python manage.py migrate",
     "startCommand": "gunicorn chemequip.wsgi --bind 0.0.0.0:$PORT"
   }
 }
